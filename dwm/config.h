@@ -10,7 +10,7 @@ static unsigned int snap      = 32;       /* snap pixel */
 static unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
+static unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
@@ -189,8 +189,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
-	{ MODKEY,			XK_p,		spawn,          SHCMD(Terminal " sh /home/anton/script.sh") },
-	{ MODKEY,			XK_s,		spawn,          SHCMD(Terminal " sh /home/anton/fzf_script.sh") },
+	{ MODKEY,			XK_p,		spawn,          SHCMD(TERMINAL " sh /home/anton/script.sh") },
+	{ MODKEY,			XK_s,		spawn,          SHCMD(TERMINAL " sh /home/anton/fzf_script.sh") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("passmenu") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
