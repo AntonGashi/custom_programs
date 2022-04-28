@@ -181,7 +181,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
 	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +60") },
-	{ MODKEY,			XK_backslash,		view,		{0} },
+  /*	{ MODKEY,			XK_backslash,		view,		{0} },*/
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
@@ -189,8 +189,9 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
-	{ MODKEY,			XK_p,		spawn,          SHCMD(TERMINAL " sh /home/anton/script.sh") },
-	{ MODKEY,			XK_s,		spawn,          SHCMD(TERMINAL " sh /home/anton/fzf_script.sh") },
+	{ MODKEY,			XK_p,		spawn,          SHCMD(TERMINAL " sh /home/anton/scripts/uni_script.sh") },
+	{ MODKEY,			XK_s,		spawn,          SHCMD(TERMINAL " sh /home/anton/scripts/fzf_script.sh") },
+	{ MODKEY,			XK_backslash,		spawn,          SHCMD(TERMINAL " sh /home/anton/scripts/documentation.sh") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("passmenu") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
