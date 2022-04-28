@@ -9,4 +9,6 @@ mv ~/custom_programs/st ~/
 mv ~/custom_programs/surf ~/
 mv ~/custom_programs/tabbed ~/
 mv ~/custom_programs/.zshrc  ~/
+mv ~/custom_programs/README.md ~/
 mv ~/custom_programs/.config/nvim ~/.config
+rm -r custom_programs
