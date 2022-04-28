@@ -16,10 +16,13 @@ require "user.toggleterm"
 require "user.project"
 require "user.impatient"
 require "user.indentline"
-require "user.alpha"
+--require "user.alpha"
 require "user.autocommands"
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.texlab.setup{}
 require'lspconfig'.remark_ls.setup{}
 vim.opt.termguicolors = true
 vim.cmd("colorscheme melange")
+require'lspconfig'.gopls.setup{}
+vim.wo.number = true 
+vim.wo.relativenumber = true
