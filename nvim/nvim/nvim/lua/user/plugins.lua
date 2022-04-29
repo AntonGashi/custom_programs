@@ -58,18 +58,16 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use {"ellisonleao/glow.nvim", branch = 'main'}
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "humanoid-colors/vim-humanoid-colorscheme"
   use "rockerBOO/boo-colorscheme-nvim"
-  use "yonlu/omni.vim"
   use "jacoborus/tender.vim"
+  use "folke/tokyonight.nvim"
+  use "EdenEast/nightfox.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

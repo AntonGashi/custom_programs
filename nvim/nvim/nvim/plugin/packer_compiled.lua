@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/melange",
     url = "https://github.com/savq/melange"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
@@ -214,11 +219,6 @@ _G.packer_plugins = {
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["omni.vim"] = {
-    loaded = true,
-    path = "/home/anton/.local/share/nvim/site/pack/packer/start/omni.vim",
-    url = "https://github.com/yonlu/omni.vim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -253,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
