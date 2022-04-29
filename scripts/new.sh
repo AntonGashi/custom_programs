@@ -1,14 +1,14 @@
 #!/bin/bash
 
-mv ~/custom_programs/.dwm ~/
-mv ~/custom_programs/dmenu ~/
-mv ~/custom_programs/dwm ~/ 
-mv ~/custom_programs/scripts ~/
-mv ~/custom_programs/slstatus ~/
-mv ~/custom_programs/st ~/
-mv ~/custom_programs/surf ~/
-mv ~/custom_programs/tabbed ~/
-mv ~/custom_programs/.zshrc  ~/
-mv ~/custom_programs/README.md ~/
-mv ~/custom_programs/.config/nvim ~/.config
-rm -r custom_programs
+mv -f ~/custom_programs/.dwm ~/
+mv -f ~/custom_programs/dmenu ~/
+mv -f ~/custom_programs/dwm ~/ 
+mv -f ~/custom_programs/scripts ~/
+mv -f ~/custom_programs/slstatus ~/
+mv -f ~/custom_programs/st ~/
+mv -f ~/custom_programs/surf ~/
+mv -f ~/custom_programs/tabbed ~/
+mv -f ~/custom_programs/.zshrc  ~/
+mv -f ~/custom_programs/README.md ~/
+mv -f ~/custom_programs/.config/nvim ~/.config
+sudo rm -r custom_programs
