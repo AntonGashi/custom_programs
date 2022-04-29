@@ -10,5 +10,5 @@ mv -f ~/custom_programs/surf ~/
 mv -f ~/custom_programs/tabbed ~/
 mv -f ~/custom_programs/.zshrc  ~/
 mv -f ~/custom_programs/README.md ~/
-mv -f ~/custom_programs/.config/nvim ~/.config
+mv -f ~/custom_programs/nvim ~/.config
 sudo rm -r custom_programs
