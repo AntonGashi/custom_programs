@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
+  --use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
@@ -69,6 +69,7 @@ return packer.startup(function(use)
   use "humanoid-colors/vim-humanoid-colorscheme"
   use "rockerBOO/boo-colorscheme-nvim"
   use "yonlu/omni.vim"
+  use "jacoborus/tender.vim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

@@ -9,7 +9,7 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
-require "user.nvim-tree"
+--require "user.nvim-tree"
 require "user.bufferline"
 require "user.lualine"
 require "user.toggleterm"
@@ -22,7 +22,7 @@ require'lspconfig'.pyright.setup{}
 require'lspconfig'.texlab.setup{}
 require'lspconfig'.remark_ls.setup{}
 vim.opt.termguicolors = true
-vim.cmd("colorscheme omni")
+vim.cmd("colorscheme tender")
 require'lspconfig'.gopls.setup{"gopls"}
 vim.wo.number = true 
 vim.wo.relativenumber = true
