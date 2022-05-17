@@ -9,6 +9,7 @@ sudo rm -r ~/surf
 sudo rm -r ~/tabbed
 sudo rm -r ~/.zshrc
 sudo rm -r ~/README.md
+sudo rm -r .config/picom.conf
 sudo rm -r ~/.config/nvim
 
 mv -f ~/custom_programs/.dwm ~/
@@ -21,5 +22,6 @@ mv -f ~/custom_programs/surf ~/
 mv -f ~/custom_programs/tabbed ~/
 mv -f ~/custom_programs/.zshrc  ~/
 mv -f ~/custom_programs/README.md ~/
+mv -f ~/custom_programs/picom.conf ~/.config
 mv -f ~/custom_programs/nvim ~/.config
 sudo rm -r custom_programs
