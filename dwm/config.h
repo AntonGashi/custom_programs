@@ -186,9 +186,9 @@ static Key keys[] = {
 
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
-	{ MODKEY,			XK_s,		togglesticky,	{0} },
+	/*{ MODKEY,			XK_s,		togglesticky,	{0} },*/
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
+	{ MODKEY,			XK_space,		spawn,          SHCMD("dmenu_run") },
 	{ MODKEY,			XK_p,		spawn,          SHCMD(TERMINAL " sh /home/anton/scripts/uni_script.sh") },
 	{ MODKEY,			XK_s,		spawn,          SHCMD(TERMINAL " sh /home/anton/scripts/fzf_script.sh") },
 	{ MODKEY,			XK_backslash,		spawn,          SHCMD(TERMINAL " sh /home/anton/scripts/documentation.sh") },
@@ -249,7 +249,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
 	{ MODKEY,			XK_F11,		spawn,		SHCMD("mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
 	{ MODKEY,			XK_F12,		spawn,		SHCMD("remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"") },
-	{ MODKEY,			XK_space,	zoom,		{0} },
+	{ MODKEY,			XK_c,	zoom,		{0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
 
 	{ 0,				XK_Print,	spawn,		SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
