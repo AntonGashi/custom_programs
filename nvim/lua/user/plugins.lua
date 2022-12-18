@@ -43,6 +43,10 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" 
   use "lervag/vimtex"
+  use {
+    "luukvbaal/nnn.nvim",
+    config = function() require("nnn").setup() end
+  }
   
   -- colour scheme
   use "jacoborus/tender.vim"
