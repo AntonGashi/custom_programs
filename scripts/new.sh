@@ -15,9 +15,9 @@ mv -f ~/custom_programs/st ~/
 mv -f ~/custom_programs/surf ~/
 mv -f ~/custom_programs/tabbed ~/
 mv -f ~/custom_programs/.zshrc  ~/
-mv -f ~/custom_programs/README.md ~/
 mv -f ~/custom_programs/picom.conf ~/.config
 mv -f ~/custom_programs/nvim ~/.config
+rm ~/custom_programs/README.md 
 rm -r custom_programs
 
 make -C dwm/ && make install -C dwm/ || (echo "Failed to install dwm" && false) && \
