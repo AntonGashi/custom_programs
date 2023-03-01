@@ -1,6 +1,6 @@
 #!/bin/bash
 
-feh --bg-fill /home/anton/Desktop/Capsule.jpg \
-picom & disown \
-slstatus \
-sudo pacman -Syyu
+feh --bg-fill /home/anton/Desktop/Capsule.jpg;
+sudo pacman -Syyu;
+picom & disown;
+slstatus
