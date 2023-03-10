@@ -29,11 +29,14 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins
+
+  'akinsho/bufferline.nvim',
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-  "windwp/nvim-autopairs",
+  'windwp/nvim-autopairs',
+  'mbbill/undootree',
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -193,15 +196,23 @@ vim.o.termguicolors = true
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+vim.keymap.set('n', 's', ':w<CR>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-vim.keymap.set('n', '<C-c>', ":nohls<CR>", { noremap = true, silent = true })
+
+vim.keymap.set('n', '?', ":setlocal spell!<CR>", { silent = true })
+vim.keymap.set('n', 'n', "nzzzv", { silent = true })
+vim.keymap.set('n', 'N', "Nzzzv", { silent = true })
+vim.keymap.set('n', '<C-d>', "<C-d>zz", { silent = true })
+vim.keymap.set('n', '<C-u>', "<C-u>zz", { silent = true })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
+
 
 -- [[ Basic Keymaps END ]]
 -- [[ Basic Keymaps END ]]
 -- [[ Basic Keymaps END ]]
---
 --
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
