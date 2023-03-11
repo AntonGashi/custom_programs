@@ -14,7 +14,8 @@ clean_up(){
     [ -d "/tmp/st" ] && rm -r /tmp/st;
     [ -d "/tmp/dmenu" ] && rm -r /tmp/dmenu;
     [ -d "/tmp/slstatus" ] && rm -r /tmp/slstatus;
-    [ -d "/home/anton.config/nvim" ] && rm -r /home/anton/.config/nvim
+    [ -d "/home/anton/.config/nvim" ] && rm -r /home/anton/.config/nvim
+    [ -d "/home/anton/scripts" ] && rm -r /home/anton/scripts
     echo "Files removed!"
 }
 
