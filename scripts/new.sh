@@ -26,7 +26,7 @@ git_clone() {
     mv -f custom_programs/st /tmp
     mv -f custom_programs/dmenu /tmp
     mv -f custom_programs/slstatus /tmp
-    mv -f custom_programs/nvim /home/$USER/.config
+    mv -f custom_programs/nvim /home/anton/.config
     echo "Cloned and moved!"
 
 }
