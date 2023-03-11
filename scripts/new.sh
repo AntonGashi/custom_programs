@@ -9,12 +9,12 @@ fi
 clean_up(){
     
     echo "Removing files if needed..."
-    [ -d "/home/$USER/custom_programs" ] && rm -r /home/$USER/custom_programs;
-    [ -d "/home/$USER/dwm" ] && rm -r /home/$USER/dwm;
-    [ -d "/home/$USER/st" ] && rm -r /home/$USER/st;
-    [ -d "/home/$USER/dmenu" ] && rm -r /home/$USER/dmenu;
-    [ -d "/home/$USER/slstatus" ] && rm -r /home/$USER/slstatus;
-    [ -d "/home/$USER/.config/nvim" ] && rm -r /home/$USER/.config/nvim
+    [ -d "custom_programs" ] && rm -r custom_programs;
+    [ -d "dwm" ] && rm -r dwm;
+    [ -d "st" ] && rm -r st;
+    [ -d "dmenu" ] && rm -r dmenu;
+    [ -d "slstatus" ] && rm -r slstatus;
+    [ -d ".config/nvim" ] && rm -r .config/nvim
     echo "Files removed!"
 }
 
@@ -22,10 +22,10 @@ git_clone() {
 
     echo "Cloning repo and moving files..."
     git clone -q https://github.com/AntonGashi/custom_programs.git
-    mv -f /home/$USER/custom_programs/dwm /home/$USER/
-    mv -f /home/$USER/custom_programs/st /home/$USER/
-    mv -f /home/$USER/custom_programs/st /home/$USER/
-    mv -f /home/$USER/custom_programs/st /home/$USER/
+    mv -f custom_programs/dwm ../
+    mv -f custom_programs/st ../
+    mv -f custom_programs/st ../
+    mv -f custom_programs/st ../
     echo "Cloned and moved!"
 
 }
