@@ -7,7 +7,6 @@ static void incrgaps(const Arg *arg);
 /* static void incrovgaps(const Arg *arg); */
 /* static void incrihgaps(const Arg *arg); */
 /* static void incrivgaps(const Arg *arg); */
-static void togglegaps(const Arg *arg);
 static void togglesmartgaps(const Arg *arg);
 
 /* Layouts */
@@ -42,12 +41,6 @@ setgaps(int oh, int ov, int ih, int iv)
 	arrange(selmon);
 }
 
-static void
-togglegaps(const Arg *arg)
-{
-	enablegaps = !enablegaps;
-	arrange(NULL);
-}
 
 static void
 togglesmartgaps(const Arg *arg)
