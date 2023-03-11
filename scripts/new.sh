@@ -36,10 +36,10 @@ git_clone() {
 make_install() {
 
     echo "Making and installing programs..."
-    make -sC /home/$SUDO_USER/dwm/ && make install -sC /home/$SUDO_USER/dwm/ || (echo "Failed to install dwm" && false)
-    make -sC /home/$SUDO_USER/st/ && make install -sC /home/$SUDO_USER/st/ || (echo "Failed to install st" && false)
-    make -sC /home/$SUDO_USER/dmenu/ && make install -sC /home/$SUDO_USER/dmenu/ || (echo "Failed to install dmenu" && false)
-    make -sC /home/$SUDO_USER/slstatus/ && make install -sC /home/$SUDO_USER/slstatus/ || (echo "Failed to install slstatus" && false)
+    make install --silent --directory="/home/$SUDO_USER/dwm/" || (echo "Failed to install dwm" && false)
+    make install --silent --directory="/home/$SUDO_USER/st/" || (echo "Failed to install st" && false)
+    make install --silent --directory="/home/$SUDO_USER/dmenu/" || (echo "Failed to install dmenu" && false)
+    make install --silent --directory="/home/$SUDO_USER/slstatus/" || (echo "Failed to install slstatus" && false)
     echo "Programs installed!!!"
 
 }
