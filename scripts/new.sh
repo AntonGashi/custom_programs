@@ -9,40 +9,40 @@ fi
 clean_up(){
     
     echo "Removing files if needed..."
-    [ -d "/home/anton/custom_programs" ] && rm -r /home/anton/custom_programs;
-    [ -d "/tmp/dwm" ] && rm -r /tmp/dwm;
-    [ -d "/tmp/st" ] && rm -r /tmp/st;
-    [ -d "/tmp/dmenu" ] && rm -r /tmp/dmenu;
-    [ -d "/tmp/slstatus" ] && rm -r /tmp/slstatus;
-    [ -d "/home/anton/.config/nvim" ] && rm -r /home/anton/.config/nvim
-    [ -d "/home/anton/scripts" ] && rm -r /home/anton/scripts
-    echo "Files removed!"
+    [ -d "/home/$SUDO_USER/custom_programs" ] && rm -r /home/$SUDO_USER/custom_programs;
+    [ -d "/home/$SUDO_USER/dwm" ] && rm -r /home/$SUDO_USER/dwm;
+    [ -d "/home/$SUDO_USER/st" ] && rm -r /home/$SUDO_USER/st;
+    [ -d "/home/$SUDO_USER/dmenu" ] && rm -r /home/$SUDO_USER/dmenu;
+    [ -d "/home/$SUDO_USER/slstatus" ] && rm -r /home/$SUDO_USER/slstatus;
+    [ -d "/home/$SUDO_USER/.config/nvim" ] && rm -r /home/$SUDO_USER/.config/nvim
+    [ -d "/home/$SUDO_USER/scripts" ] && rm -r /home/$SUDO_USER/scripts
+    echo "Files removed!!!"
 }
 
 git_clone() {
 
     echo "Cloning repo and moving files..."
     git clone -q https://github.com/AntonGashi/custom_programs.git &&
-    mv -f custom_programs/dwm /tmp
-    mv -f custom_programs/st /tmp
-    mv -f custom_programs/dmenu /tmp
-    mv -f custom_programs/slstatus /tmp
-    mv -f custom_programs/nvim /home/anton/.config
-    mv -f custom_programs/scripts /home/anton
-    echo "Cloned and moved!"
+    mv -f /home/$SUDO_USER/custom_programs/dwm /home/$SUDO_USER
+    mv -f /home/$SUDO_USER/custom_programs/st /home/$SUDO_USER
+    mv -f /home/$SUDO_USER/custom_programs/dmenu /home/$SUDO_USER
+    mv -f /home/$SUDO_USER/custom_programs/slstatus /home/$SUDO_USER
+    mv -f /home/$SUDO_USER/custom_programs/nvim /home/$SUDO_USER/.config
+    mv -f /home/$SUDO_USER/custom_programs/scripts /home/$SUDO_USER
+    echo "Cloned and moved!!!"
 
 }
 
 make_install() {
 
     echo "Making and installing programs..."
-    make -C /tmp/dwm/ && make install -C /tmp/dwm/ || (echo "Failed to install dwm" && false)
-    make -C /tmp/st/ && make install -C /tmp/st/ || (echo "Failed to install st" && false)
-    make -C /tmp/dmenu/ && make install -C /tmp/dmenu/ || (echo "Failed to install dmenu" && false)
-    make -C /tmp/slstatus/ && make install -C /tmp/slstatus/ || (echo "Failed to install slstatus" && false)
-    echo "Programs installed"
+    make -sC /home/$SUDO_USER/dwm/ && make install -sC /home/$SUDO_USER/dwm/ || (echo "Failed to install dwm" && false)
+    make -sC /home/$SUDO_USER/st/ && make install -sC /home/$SUDO_USER/st/ || (echo "Failed to install st" && false)
+    make -sC /home/$SUDO_USER/dmenu/ && make install -sC /home/$SUDO_USER/dmenu/ || (echo "Failed to install dmenu" && false)
+    make -sC /home/$SUDO_USER/slstatus/ && make install -sC /home/$SUDO_USER/slstatus/ || (echo "Failed to install slstatus" && false)
+    echo "Programs installed!!!"
 
 }
 
 clean_up && git_clone && make_install || echo "install failed"
-rm -r /home/anton/custom_programs
+rm -r /home/$SUDO_USER/custom_programs
