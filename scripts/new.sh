@@ -6,25 +6,33 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
-mv -f ~/custom_programs/.dwm ~/
-mv -f ~/custom_programs/dmenu ~/
-mv -f ~/custom_programs/dwm ~/ 
-mv -f ~/custom_programs/scripts ~/
-mv -f ~/custom_programs/slstatus ~/
-mv -f ~/custom_programs/st ~/
-mv -f ~/custom_programs/surf ~/
-mv -f ~/custom_programs/tabbed ~/
-mv -f ~/custom_programs/.zshrc  ~/
-mv -f ~/custom_programs/picom.conf ~/.config
-mv -f ~/custom_programs/nvim ~/.config
-rm ~/custom_programs/README.md 
-rm -r custom_programs
+clean_up(){
 
-make -C dwm/ && make install -C dwm/ || (echo "Failed to install dwm" && false) && \
-make -C st/ && make install -C st/ || (echo "Failed to install st" && false) && \
-make -C dmenu/ && make install -C dmenu/ || (echo "Failed to install dmenu" && false) && \
-make -C slstatus/ && make install -C slstatus/ || (echo "Failed to install slstatus" && false) && \
+    [ -d "/home/$USER/dwm" ] && rm -r /home/$USER/dwm
+    [ -d "/home/$USER/st" ] && rm -r /home/$USER/st
+    [ -d "/home/$USER/dmenu" ] && rm -r /home/$USER/dmenu
+    [ -d "/home/$USER/slstatus" ] && rm -r /home/$USER/slstatus
+    [ -d "/home/$USER/.config/nvim" ] && rm -r /home/$USER/.config/nvim
 
-echo "Successfully installed custom_programs" && \
-echo "Restart machine" || \
-(echo "Installation failed" && exit 1)
+}
+
+git_clone() {
+
+    git clone -q https://github.com/AntonGashi/custom_programs.git
+    mv -f /home/$USER/custom_programs/dwm /home/$USER/
+    mv -f /home/$USER/custom_programs/st /home/$USER/
+    mv -f /home/$USER/custom_programs/st /home/$USER/
+    mv -f /home/$USER/custom_programs/st /home/$USER/
+
+}
+
+make_install() {
+
+    make -C dwm/ && make install -C dwm/ || (echo "Failed to install dwm" && false)
+    make -C st/ && make install -C st/ || (echo "Failed to install st" && false)
+    make -C dmenu/ && make install -C dmenu/ || (echo "Failed to install dmenu" && false)
+    make -C slstatus/ && make install -C slstatus/ || (echo "Failed to install slstatus" && false)
+
+}
+
+(clean_up && git_clone && make_install) || echo "Install failed"
