@@ -9,12 +9,12 @@ fi
 clean_up(){
     
     echo "Removing files if needed..."
-    [ -d "custom_programs" ] && rm -r custom_programs;
-    [ -d "/tmp/dwm" ] && rm -r dwm;
-    [ -d "/tmp/st" ] && rm -r st;
-    [ -d "/tmp/dmenu" ] && rm -r dmenu;
-    [ -d "/tmp/slstatus" ] && rm -r slstatus;
-    [ -d ".config/nvim" ] && rm -r .config/nvim
+    [ -d "/home/anton/custom_programs" ] && rm -r /home/anton/custom_programs;
+    [ -d "/tmp/dwm" ] && rm -r /tmp/dwm;
+    [ -d "/tmp/st" ] && rm -r /tmp/st;
+    [ -d "/tmp/dmenu" ] && rm -r /tmp/dmenu;
+    [ -d "/tmp/slstatus" ] && rm -r /tmp/slstatus;
+    [ -d "/home/anton.config/nvim" ] && rm -r /home/anton/.config/nvim
     echo "Files removed!"
 }
 
