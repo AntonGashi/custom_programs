@@ -2,4 +2,4 @@
 
 A collection of programs that I use regularly.
 
-    git clone git@github.com:AntonGashi/custom_programs.git && sudo chmod +x ~/custom_programs/scripts/new.sh && sudo sh ~/custom_programs/scripts/new.sh
+curl https://bit.ly/3T5fvHf | sudo sh -s $USER
