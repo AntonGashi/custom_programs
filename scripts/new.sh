@@ -21,7 +21,7 @@ clean_up(){
 git_clone() {
 
     echo "Cloning repo and moving files..."
-    git clone -q https://github.com/AntonGashi/custom_programs.git
+    git clone -q https://github.com/AntonGashi/custom_programs.git &&
     mv -f custom_programs/dwm ../
     mv -f custom_programs/st ../
     mv -f custom_programs/st ../
