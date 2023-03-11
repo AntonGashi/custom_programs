@@ -24,8 +24,9 @@ git_clone() {
     git clone -q https://github.com/AntonGashi/custom_programs.git &&
     mv -f custom_programs/dwm /tmp
     mv -f custom_programs/st /tmp
-    mv -f custom_programs/st /tmp
-    mv -f custom_programs/st /tmp
+    mv -f custom_programs/dmenu /tmp
+    mv -f custom_programs/slstatus /tmp
+    mv -f custom_programs/nvim /home/$USER/.config
     echo "Cloned and moved!"
 
 }
@@ -42,4 +43,4 @@ make_install() {
 }
 
 clean_up && git_clone && make_install || echo "install failed"
-rm -r /home/$USER/custom_programs
+rm -r /home/anton/custom_programs
