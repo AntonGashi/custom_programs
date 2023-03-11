@@ -22,10 +22,10 @@ git_clone() {
 
     echo "Cloning repo and moving files..."
     git clone -q https://github.com/AntonGashi/custom_programs.git &&
-    mv -f custom_programs/dwm /home/$USER
-    mv -f custom_programs/st /home/$USER
-    mv -f custom_programs/st /home/$USER
-    mv -f custom_programs/st /home/$USER
+    mv -f custom_programs/dwm ~/
+    mv -f custom_programs/st ~/
+    mv -f custom_programs/st ~/
+    mv -f custom_programs/st ~/
     echo "Cloned and moved!"
 
 }
@@ -33,10 +33,10 @@ git_clone() {
 make_install() {
 
     echo "Making and installing programs..."
-    make -C dwm/ && make install -C dwm/ || (echo "Failed to install dwm" && false)
-    make -C st/ && make install -C st/ || (echo "Failed to install st" && false)
-    make -C dmenu/ && make install -C dmenu/ || (echo "Failed to install dmenu" && false)
-    make -C slstatus/ && make install -C slstatus/ || (echo "Failed to install slstatus" && false)
+    make -C ~/dwm/ && make install -C ~/dwm/ || (echo "Failed to install dwm" && false)
+    make -C ~/st/ && make install -C ~/st/ || (echo "Failed to install st" && false)
+    make -C ~/dmenu/ && make install -C ~/dmenu/ || (echo "Failed to install dmenu" && false)
+    make -C ~/slstatus/ && make install -C ~/slstatus/ || (echo "Failed to install slstatus" && false)
     echo "Programs installed"
 
 }
