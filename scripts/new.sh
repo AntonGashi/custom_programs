@@ -22,10 +22,10 @@ git_clone() {
 
     echo "Cloning repo and moving files..."
     git clone -q https://github.com/AntonGashi/custom_programs.git &&
-    mv -f custom_programs/dwm ~/
-    mv -f custom_programs/st ~/
-    mv -f custom_programs/st ~/
-    mv -f custom_programs/st ~/
+    mv -f custom_programs/dwm /tmp
+    mv -f custom_programs/st /tmp
+    mv -f custom_programs/st /tmp
+    mv -f custom_programs/st /tmp
     echo "Cloned and moved!"
 
 }
@@ -33,10 +33,10 @@ git_clone() {
 make_install() {
 
     echo "Making and installing programs..."
-    make -C ~/dwm/ && make install -C ~/dwm/ || (echo "Failed to install dwm" && false)
-    make -C ~/st/ && make install -C ~/st/ || (echo "Failed to install st" && false)
-    make -C ~/dmenu/ && make install -C ~/dmenu/ || (echo "Failed to install dmenu" && false)
-    make -C ~/slstatus/ && make install -C ~/slstatus/ || (echo "Failed to install slstatus" && false)
+    make -C /tmp/dwm/ && make install -C /tmp/dwm/ || (echo "Failed to install dwm" && false)
+    make -C /tmp/st/ && make install -C /tmp/st/ || (echo "Failed to install st" && false)
+    make -C /tmp/dmenu/ && make install -C /tmp/dmenu/ || (echo "Failed to install dmenu" && false)
+    make -C /tmp/slstatus/ && make install -C /tmp/slstatus/ || (echo "Failed to install slstatus" && false)
     echo "Programs installed"
 
 }
