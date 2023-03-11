@@ -10,10 +10,10 @@ clean_up(){
     
     echo "Removing files if needed..."
     [ -d "custom_programs" ] && rm -r custom_programs;
-    [ -d "dwm" ] && rm -r dwm;
-    [ -d "st" ] && rm -r st;
-    [ -d "dmenu" ] && rm -r dmenu;
-    [ -d "slstatus" ] && rm -r slstatus;
+    [ -d "/tmp/dwm" ] && rm -r dwm;
+    [ -d "/tmp/st" ] && rm -r st;
+    [ -d "/tmp/dmenu" ] && rm -r dmenu;
+    [ -d "/tmp/slstatus" ] && rm -r slstatus;
     [ -d ".config/nvim" ] && rm -r .config/nvim
     echo "Files removed!"
 }
