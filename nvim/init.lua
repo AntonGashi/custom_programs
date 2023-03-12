@@ -1,6 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.o.clipboard = "unnamed"
+
 -- Package manager
 -- Package manager
 -- Package manager
