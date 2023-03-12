@@ -2,6 +2,12 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.o.clipboard = "unnamed"
+vim.o.autoindent = true
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.ruler = true
+vim.o.cursorline = true
+vim.o.expandtab = true
 
 -- Package manager
 -- Package manager
