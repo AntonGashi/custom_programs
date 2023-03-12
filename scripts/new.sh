@@ -8,7 +8,7 @@ fi
 
 clean_up(){
     
-    echo "Removing files if needed..."
+    echo -e "####\nRemoving files if needed...\n####"
     [ -d "/home/$SUDO_USER/custom_programs" ] && rm -r /home/$SUDO_USER/custom_programs;
     [ -d "/home/$SUDO_USER/dwm" ] && rm -r /home/$SUDO_USER/dwm;
     [ -d "/home/$SUDO_USER/st" ] && rm -r /home/$SUDO_USER/st;
@@ -16,12 +16,12 @@ clean_up(){
     [ -d "/home/$SUDO_USER/slstatus" ] && rm -r /home/$SUDO_USER/slstatus;
     [ -d "/home/$SUDO_USER/.config/nvim" ] && rm -r /home/$SUDO_USER/.config/nvim
     [ -d "/home/$SUDO_USER/scripts" ] && rm -r /home/$SUDO_USER/scripts
-    echo "Files removed!!!"
+    echo -e "####\nFiles removed!!!\n####"
 }
 
 git_clone() {
 
-    echo "Cloning repo and moving files..."
+    echo -e "####\nCloning repo and moving files...\n####"
     git clone -q https://github.com/AntonGashi/custom_programs.git &&
     mv -f /home/$SUDO_USER/custom_programs/dwm /home/$SUDO_USER
     mv -f /home/$SUDO_USER/custom_programs/st /home/$SUDO_USER
@@ -29,18 +29,18 @@ git_clone() {
     mv -f /home/$SUDO_USER/custom_programs/slstatus /home/$SUDO_USER
     mv -f /home/$SUDO_USER/custom_programs/nvim /home/$SUDO_USER/.config
     mv -f /home/$SUDO_USER/custom_programs/scripts /home/$SUDO_USER
-    echo "Cloned and moved!!!"
+    echo -e "####\nCloned and moved!!!\n####"
 
 }
 
 make_install() {
 
-    echo "Making and installing programs..."
+    echo -e "####\nMaking and installing programs...\n####"
     make install --silent --directory="/home/$SUDO_USER/dwm/" || (echo "Failed to install dwm" && false)
     make install --silent --directory="/home/$SUDO_USER/st/" || (echo "Failed to install st" && false)
     make install --silent --directory="/home/$SUDO_USER/dmenu/" || (echo "Failed to install dmenu" && false)
     make install --silent --directory="/home/$SUDO_USER/slstatus/" || (echo "Failed to install slstatus" && false)
-    echo "Programs installed!!!"
+    echo -e "####\nPrograms installed!!!\n####"
 
 }
 
