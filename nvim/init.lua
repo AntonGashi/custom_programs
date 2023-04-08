@@ -8,7 +8,7 @@ vim.o.relativenumber = true
 vim.o.ruler = true
 vim.o.cursorline = true
 vim.o.expandtab = true
-
+vim.o.hlsearch = true
 -- Package manager
 -- Package manager
 -- Package manager
@@ -35,19 +35,19 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-
+  'github/copilot.vim',
+  'lervag/vimtex',
   -- Git related plugins
-
   'akinsho/bufferline.nvim',
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
   {
-	  'windwp/nvim-autopairs',
-	  config = function()
-		  require("nvim-autopairs").setup {}
-		end,
+    'windwp/nvim-autopairs',
+    config = function()
+      require("nvim-autopairs").setup {}
+    end,
   },
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -162,7 +162,10 @@ require('lazy').setup({
 
 
 -- Set highlight on search
-vim.o.hlsearch = false
+--
+vim.cmd('imap <silent><script><expr> <C-c> copilot#Accept("")')
+vim.cmd("let g:copilot_no_tab_map = v:true")
+
 
 -- Make line numbers default
 vim.wo.number = true
@@ -206,9 +209,13 @@ vim.o.termguicolors = true
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
+
+--vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("\<CR>")', { noremap = true, silent = true })
+--
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 vim.keymap.set('n', 's', ':w<CR>', { silent = true })
+vim.keymap.set('n', 'H', ':nohls<CR>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
