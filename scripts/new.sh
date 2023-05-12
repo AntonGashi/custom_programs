@@ -14,7 +14,6 @@ clean_up(){
     [ -d "/home/$SUDO_USER/st" ] && rm -r /home/$SUDO_USER/st;
     [ -d "/home/$SUDO_USER/dmenu" ] && rm -r /home/$SUDO_USER/dmenu;
     [ -d "/home/$SUDO_USER/slstatus" ] && rm -r /home/$SUDO_USER/slstatus;
-    [ -d "/home/$SUDO_USER/.config/nvim" ] && rm -r /home/$SUDO_USER/.config/nvim
     [ -d "/home/$SUDO_USER/scripts" ] && rm -r /home/$SUDO_USER/scripts
     echo -e "####\nFiles removed!!!\n####"
 }
@@ -27,7 +26,6 @@ git_clone() {
     mv -f /home/$SUDO_USER/custom_programs/st /home/$SUDO_USER
     mv -f /home/$SUDO_USER/custom_programs/dmenu /home/$SUDO_USER
     mv -f /home/$SUDO_USER/custom_programs/slstatus /home/$SUDO_USER
-    mv -f /home/$SUDO_USER/custom_programs/nvim /home/$SUDO_USER/.config
     mv -f /home/$SUDO_USER/custom_programs/scripts /home/$SUDO_USER
     echo -e "####\nCloned and moved!!!\n####"
 
